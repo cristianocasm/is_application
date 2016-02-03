@@ -1,4 +1,4 @@
-<%- model_class = Student -%>
+<%- model_class = Estudante -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -6,26 +6,26 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:register_number) %></th>
-      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:numero_de_registro) %></th>
+      <th><%= model_class.human_attribute_name(:situacao) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @students.each do |student| %>
+    <% @estudantes.each do |estudante| %>
       <tr>
-        <td><%= link_to student.id, student_path(student) %></td>
-        <td><%= student.name %></td>
-        <td><%= student.register_number %></td>
-        <td><%= student.status %></td>
-        <td><%=l student.created_at %></td>
+        <td><%= link_to estudante.id, estudante_path(estudante) %></td>
+        <td><%= estudante.nome %></td>
+        <td><%= estudante.numero_de_registro %></td>
+        <td><%= estudante.situacao %></td>
+        <td><%=l estudante.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_student_path(student), :class => 'btn btn-default btn-xs' %>
+                      edit_estudante_path(estudante), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      student_path(student),
+                      estudante_path(estudante),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -36,5 +36,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_student_path,
+            new_estudante_path,
             :class => 'btn btn-primary' %>

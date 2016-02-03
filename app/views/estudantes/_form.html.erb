@@ -1,0 +1,12 @@
+<%= simple_form_for @estudante, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nome %>
+  <%= error_span(@estudante[:nome]) %>
+  <%= f.input :numero_de_registro %>
+  <%= error_span(@estudante[:numero_de_registro]) %>
+  <%= f.input :situacao %>
+  <%= error_span(@estudante[:situacao]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                estudantes_path, :class => 'btn btn-default' %>
+<% end %>

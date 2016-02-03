@@ -1,10 +1,10 @@
-class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+class EstudantesController < ApplicationController
+  before_action :set_estudante, only: [:show, :edit, :update, :destroy]
 
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    @estudantes = Estudante.all
   end
 
   # GET /students/1
@@ -37,12 +37,12 @@ class StudentsController < ApplicationController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_student
-    @reward = Student.find(params[:id])
+  def set_estudante
+    @reward = Estudante.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def reward_params
-    params.require(:student).permit(:id, :name, :register_number, :status)
+  def estudante_params
+    params.require(:estudante).permit(:id, :nome, :numero_de_registro, :situacao)
   end
 end
