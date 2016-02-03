@@ -54,6 +54,7 @@ group :development, :test do
 
   gem 'awesome_print'
   gem 'pry-rails'
+  gem 'byebug'
 end
 
 group :test do
@@ -63,6 +64,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.4.1'
   gem 'forgery', '~> 0.6.0'
   gem 'fakeweb', '~> 1.3.0'
+  gem 'faker'
 end
 
 group :production do

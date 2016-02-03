@@ -13,4 +13,5 @@
 /public/assets
 /public/uploads
 .zeus.sock
+.byebug_history
 rails_best_practices_output.html
