@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'students#index'
-  
-  resources :students
-  # The priority is based upon order of creation: first created -> highest priority.
+  resources :estudantes
+
+  root to: 'estudantes#index'
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
