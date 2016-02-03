@@ -135,6 +135,9 @@ pt-BR:
       create: Criar %{model}
       submit: Salvar %{model}
       update: Atualizar %{model}
+    links:
+      new: Novo
+    actions: Ações
   number:
     currency:
       format:
