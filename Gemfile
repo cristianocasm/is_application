@@ -67,3 +67,5 @@ end
 
 group :production do
 end
+
+gem "twitter-bootstrap-rails"
