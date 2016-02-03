@@ -1,0 +1,16 @@
+/.bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/schema.rb
+/log/*.log
+/tmp
+/config/database.yml
+/config/application.yml
+/config/newrelic.yml
+/coverage
+/doc/
+/config/initializers/faye_token.rb
+/public/assets
+/public/uploads
+.zeus.sock
+rails_best_practices_output.html
