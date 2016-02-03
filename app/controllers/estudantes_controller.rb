@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: estudantes
+#
+#  id                 :integer          not null, primary key
+#  nome               :string(255)
+#  numero_de_registro :string(255)
+#  situacao           :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
 class EstudantesController < ApplicationController
   before_action :set_estudante, only: [:show, :edit, :update, :destroy]
 

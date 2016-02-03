@@ -19,6 +19,4 @@ RSpec.describe Estudante, :type => :model do
   it { should validate_presence_of(:nome) }
   it { should validate_presence_of(:numero_de_registro) }
   it { should validate_presence_of(:situacao) }
-
-  pending "add some examples to (or delete) #{__FILE__}"
 end
