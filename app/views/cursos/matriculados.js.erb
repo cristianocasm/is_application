@@ -1,0 +1,10 @@
+var myDiv = $(".sala_curso_id");
+var selectList = '<%= escape_javascript(select_tag(:sala, options_from_collection_for_select(@estudantes, "id", "nome", @cursoEstud.map(&:id)), { multiple: true, class: "dual-list", name: "sala[estudante_ids][]" })) %>';
+
+myDiv.append(selectList);
+
+
+$('.dual-list').bootstrapDualListbox({
+  nonSelectedListLabel: 'Matriculados',
+  selectedListLabel: 'Não Matriculados',
+});

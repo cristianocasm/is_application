@@ -19,4 +19,5 @@ RSpec.describe Estudante, :type => :model do
   it { should validate_presence_of(:nome) }
   it { should validate_presence_of(:numero_de_registro) }
   it { should validate_presence_of(:situacao) }
+  it { should have_many(:salas) }
 end

@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :cursos
-  resources :estudantes
-
   root to: 'estudantes#index'
+
+  resources :salas, except: [:edit, :update, :show]
+  resources :estudantes
+  resources :cursos do
+    get "/matriculados", to: 'cursos#matriculados', on: :member
+  end
+
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

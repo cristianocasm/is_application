@@ -11,5 +11,7 @@
 #
 
 class Estudante < ActiveRecord::Base
+  has_many :salas, dependent: :destroy
+  
   validates_presence_of :nome, :numero_de_registro, :situacao
 end

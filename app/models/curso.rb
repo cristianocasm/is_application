@@ -11,5 +11,8 @@
 #
 
 class Curso < ActiveRecord::Base
+  has_many :salas, dependent: :destroy
+  has_many :estudantes, through: :salas
+
   validates_presence_of :nome, :descricao, :situacao
 end

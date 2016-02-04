@@ -22,6 +22,8 @@
         <td><%= estudante.situacao %></td>
         <td><%=l estudante.created_at %></td>
         <td>
+          <%= link_to t('.cur_matr', :default => t("helpers.links.cursos_matriculados")),
+                      salas_path(estudante: estudante), :class => 'btn btn-success btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_estudante_path(estudante), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

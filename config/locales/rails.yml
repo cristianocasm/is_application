@@ -141,6 +141,10 @@ pt-BR:
       back: Voltar
       edit: Editar
       destroy: Excluir
+      enroll: Matricular Alunos
+      alunos_matriculados: Alunos Matriculados
+      cursos_matriculados: Cursos Matriculados
+      todos: Todas As Matrículas
     actions: Ações
   number:
     currency:

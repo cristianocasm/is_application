@@ -9,7 +9,6 @@
       <th><%= model_class.human_attribute_name(:nome) %></th>
       <th><%= model_class.human_attribute_name(:descricao) %></th>
       <th><%= model_class.human_attribute_name(:situacao) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -20,8 +19,9 @@
         <td><%= curso.nome %></td>
         <td><%= curso.descricao %></td>
         <td><%= curso.situacao %></td>
-        <td><%=l curso.created_at %></td>
         <td>
+          <%= link_to t('.al_matr', :default => t("helpers.links.alunos_matriculados")),
+                      salas_path(curso: curso), :class => 'btn btn-success btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_curso_path(curso), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

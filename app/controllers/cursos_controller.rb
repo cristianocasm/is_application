@@ -11,7 +11,7 @@
 #
 
 class CursosController < ApplicationController
-  before_action :set_curso, only: [:show, :edit, :update, :destroy]
+  before_action :set_curso, only: [:show, :edit, :update, :destroy, :matriculados]
 
   # GET /cursos
   # GET /cursos.json
@@ -40,7 +40,7 @@ class CursosController < ApplicationController
 
     respond_to do |format|
       if @curso.save
-        format.html { redirect_to @curso, notice: 'Curso was successfully created.' }
+        format.html { redirect_to @curso, notice: 'Curso foi criado(a) com sucesso.' }
         format.json { render action: 'show', status: :created, location: @curso }
       else
         format.html { render action: 'new' }
@@ -54,7 +54,7 @@ class CursosController < ApplicationController
   def update
     respond_to do |format|
       if @curso.update(curso_params)
-        format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
+        format.html { redirect_to @curso, notice: 'Curso foi atualizado(a) com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -70,6 +70,16 @@ class CursosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cursos_url }
       format.json { head :no_content }
+    end
+  end
+
+  # GET cursos/1/matriculados
+  def matriculados
+    @cursoEstud = @curso.estudantes
+    @estudantes = Estudante.all
+
+    respond_to do |format|
+        format.js
     end
   end
 
