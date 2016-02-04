@@ -12,8 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require twitter/bootstrap
 //= require jquery.bootstrap-duallistbox
 //= require sidebar
 // require turbolinks
 //= require_tree .
+
+$(document).on('load', function() {
+  $('.datatable').DataTable();
+});

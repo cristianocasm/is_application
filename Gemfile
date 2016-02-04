@@ -71,3 +71,4 @@ group :production do
 end
 
 gem "twitter-bootstrap-rails"
+gem 'jquery-datatables-rails', '~> 3.3.0'
