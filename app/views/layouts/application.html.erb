@@ -8,7 +8,40 @@
 </head>
 <body style='margin: 2em;'>
 
-<%= yield %>
+  <div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+      <ul class="nav sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+               Brand
+            </a>
+        </li>
+        <li>
+            <%= link_to('Cursos', cursos_path) %>
+        </li>
+        <li>
+            <%= link_to('Estudantes', estudantes_path) %>
+        </li>
+        <li>
+            <%= link_to('Salas de Aula', salas_path) %>
+        </li>
+      </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+
+    <div id="page-content-wrapper">
+      <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+        <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+      </button>
+    </div>
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>

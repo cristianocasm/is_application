@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require jquery.bootstrap-duallistbox
+//= require sidebar
 // require turbolinks
 //= require_tree .
